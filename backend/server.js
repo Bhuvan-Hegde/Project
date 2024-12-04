@@ -18,6 +18,9 @@ const paymentRoutes = require('./routes/payments');
 const courseRoutes = require('./routes/course');
 
 
+
+
+
 // middleware 
 app.use(express.json()); // to parse json body
 app.use(cookieParser());
@@ -36,7 +39,8 @@ app.use(
 )
 
 
-const PORT = process.env.PORT || 5000;
+const PORT ="http://localhost:5000"; // Replace with your API's actual base URL
+;
 
 app.listen(PORT, () => {
     console.log(`Server Started on PORT ${PORT}`);

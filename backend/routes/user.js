@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
+
+
 // Controllers
 const {
     signup,
@@ -18,6 +20,7 @@ const {
 
 // Middleware
 const { auth } = require('../middleware/auth');
+
 
 
 // Routes for Login, Signup, and Authentication

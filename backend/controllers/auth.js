@@ -31,12 +31,21 @@ exports.sendOTP = async (req, res) => {
         }
 
         // generate Otp
+
+        const otp = otpGenerator.generate(6, {
+            digits: true, // Include numbers
+            upperCaseAlphabets: false, // Exclude uppercase letters
+            lowerCaseAlphabets: false, // Exclude lowercase letters
+            specialChars: false // Exclude special characters
+        });
+        /*
         const otp = optGenerator.generate(6, {
             upperCaseAlphabets: false,
             lowerCaseAlphabets: false,
             specialChars: false
         })
         // console.log('Your otp - ', otp);
+        */
 
         const name = email.split('@')[0].split('.').map(part => part.replace(/\d+/g, '')).join(' ');
         console.log(name);
